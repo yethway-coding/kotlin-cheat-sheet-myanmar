@@ -104,7 +104,7 @@ fun main() {
 }
 ```
 
-### Comments<a name="comments"></a>
+### Comments (မှတ်ချက်များ)<a name="comments"></a>
 
 ```kotlin
 // This is an end-of-line comment
@@ -112,15 +112,15 @@ fun main() {
 /* This is a block comment
    on multiple lines. */
 ```
-Block comments in Kotlin can be nested.
+Kotlin တွင် block comments များကို အထပ်ထပ်ရေးနိုင်သည် (nested block comments)။
 ```kotlin
 /* The comment starts here
 /* contains a nested comment *⁠/
 and ends here. */
 ```
-### KDoc <a name="kdoc"></a>
-KDoc is the documentation format for Kotlin, similar to Javadoc for Java. KDoc is used to generate documentation for Kotlin classes, functions, and properties. KDoc comments start with the /** and end with */.
-This is an example:
+### KDoc (Kotlin Documentation) <a name="kdoc"></a>
+KDoc သည် Kotlin အတွက် documentation format တစ်ခုဖြစ်ပြီး၊ Java ရှိ Javadoc နှင့် ဆင်တူသည်။ KDoc ကို Kotlin classes, functions, နှင့် properties များအတွက် documentation ထုတ်ရန် အသုံးပြုသည်။ KDoc comments ကို /** ဖြင့် စတင်ပြီး */ ဖြင့် အဆုံးသတ်သည်။
+ဥပမာကို အောက်မှာ ရေးပြထားပါတယ်။
 ```kotlin
 /**
  * Calculates the sum of two integers.
@@ -135,15 +135,15 @@ fun sum(a: Int, b: Int): Int {
 ```
 
 ### Variables <a name="variables"></a>
-In Kotlin, variables can be declared using either the var or val keyword.
+Kotlin တွင် variable များကို var သို့မဟုတ် val keyword ကို အသုံးပြု၍ ကြေညာနိုင်သည်။
 
-var variables are mutable, meaning their value can be changed after they are initialized.
+var ဖြင့် ကြေညာထားသော variable များသည် mutable ဖြစ်သည်။ ဆိုလိုသည်မှာ ၎င်းတို့၏ တန်ဖိုးကို initialization လုပ်ပြီးနောက် ပြောင်းလဲနိုင်သည်။
 
 ```kotlin
 var x = 5
 x = 10
 ```
-val variables, on the other hand, are immutable, meaning their value cannot be changed after they are initialized.
+val ဖြင့် ကြေညာထားသော variable များသည် immutable ဖြစ်သည်။ ဆိုလိုသည်မှာ ၎င်းတို့၏ တန်ဖိုးကို initialization လုပ်ပြီးနောက် ပြောင်းလဲ၍ မရပါ။
 
 ```kotlin
 val y = 5
@@ -151,7 +151,7 @@ y = 10 // This will result in a compilation error
 ```
 
 ### Data types <a name="data-types"></a>
-Here's a brief overview of the most commonly used data types:
+Kotlin တွင် အသုံးများသော data types များကို အောက်တွင် အကျဉ်းချုပ်ဖော်ပြထားသည်။
 
 ```kotlin
     val booleanVar: Boolean = true
@@ -165,25 +165,25 @@ Here's a brief overview of the most commonly used data types:
     val stringVar: String = "Hello, world!"
 ```
 
-### Type Inference <a name="type-inference"></a>
+### Type Inference (Type များကို auto သတ်မှတ်ပေးခြင်း) <a name="type-inference"></a>
 
-Kotlin supports type inference, which means the compiler can infer the type of a variable from its initial value.
+Kotlin သည် type inference ကို ထောက်ပံ့ပေးသည်။ ဆိုလိုသည်မှာ variable တစ်ခု၏ type ကို ၎င်း၏ initial value (ကနဦးတန်ဖိုး) ကိုကြည့်ပြီး အလိုအလျောက် သတ်မှတ်ပေးနိုင်သည်။ ထို့ကြောင့် variable ကြေညာရာတွင် type ကို မဖော်ပြဘဲ ရေးသားနိုင်သည်။
 
 ```kotlin
 val x = 5 // The type of x is inferred to be Int
 val y = "hello" // The type of y is inferred to be String
 ```
 
-Variables in Kotlin can also be declared without an initial value, but in that case, the type must be explicitly specified:
+Kotlin တွင် variable များကို ကနဦးတန်ဖိုး (initial value) မထည့်ဘဲ ကြေညာနိုင်သည်။ သို့သော် ထိုသို့ပြုလုပ်ပါက variable ၏ type ကို ရှင်းရှင်းလင်းလင်း (explicitly) ဖော်ပြရန် လိုအပ်သည်။
 
 ```kotlin
 var z: Double // Valid, z has no initial value
 // println(z) // Invalid, z is not initialized and has no value yet
 z = 3.14 // Valid, z is initialized with a value
 ```
-### Type Conversion <a name="type-conversion"></a>
+### Type Conversion (Data Types များကို ပြောင်းလဲခြင်း) <a name="type-conversion"></a>
 
-Kotlin provides several methods for converting between data types. Here's an example in Kotlin that demonstrates various methods of type conversion.
+Kotlin တွင် data types များကို တစ်ခုမှ တစ်ခုသို့ ပြောင်းလဲရန် နည်းလမ်းများစွာ ပါဝင်ပြီးသား ဖြစ်ပါသည်။ အောက်တွင် အသုံးများသော type conversion methods များကို ဥပမာများဖြင့် ဖော်ပြထားသည်။
 
 ```kotlin
     val str: String = "123"
@@ -207,22 +207,30 @@ Kotlin provides several methods for converting between data types. Here's an exa
 
 ### String templates <a name="string-templates"></a>
 
+Kotlin တွင် string templates ကို အသုံးပြု၍ string များအတွင်း variable များ သို့မဟုတ် expressions များကို လွယ်ကူစွာ ထည့်သွင်းနိုင်သည်။ String templates သည် $ သင်္ကေတကို အသုံးပြုပြီး၊ code ကို ပိုမိုတိုတောင်းစွာ ရေးသားနိုင်စေပြီး ဖတ်ရပိုလွယ်စေပါသည်။
+
 ```kotlin
-val name= "Ali"
+val name= "Ye Thway"
 val result= "My name is $name" 
 ```
 
 ### Character escape <a name="character-escape"></a>
 
+Kotlin တွင် character escape ကို အသုံးပြု၍ special characters များ (ဥပမာ - newline, tab, quotes, etc.) ကို string များအတွင်း ထည့်သွင်းနိုင်သည်။ Escape character အတွက် backslash (\) ကို အသုံးပြုသည်။
+
 ```kotlin
-\n insert new line
-\t inserts a tab
+\t	Tab	println("Hello\tWorld")
+\n	Newline	println("Hello\nWorld")
+\"	Double Quote	println("He said, \"Hi!\"")
+\'	Single Quote	println("It\'s raining")
+\\	Backslash	println("C:\\Users\\John")
+\$	Dollar Sign (to avoid template)	println("Price: \$10")
 \r inserts carriage return
 ```
 
 ### Operators <a name="operators"></a>
 
-Arithmetic operators
+Arithmetic operators များကို ဂဏန်းသင်္ချာတွက်ချက်မှုများအတွက် အသုံးပြုသည်။ Kotlin တွင် အသုံးများသော arithmetic operators များမှာ အောက်ပါအတိုင်းဖြစ်သည်။
 
 ```kotlin
   val a = 10
@@ -235,6 +243,7 @@ Arithmetic operators
  ```
   
  Comparison operators
+ Comparison operators များကို နှိုင်းယှဉ်ခြင်း (comparison) လုပ်ရန်အတွက် အသုံးပြုသည်။ ဤ operators များသည် boolean value (true or false) ကို return ပြန်ပေးသည်။
 ```kotlin
   val c = 10
   val d = 5
@@ -247,6 +256,7 @@ Arithmetic operators
  ```
   
 Assignment operators
+Assignment operators များကို variable များအား တန်ဖိုးများ သတ်မှတ်ရန်အတွက် အသုံးပြုသည်။ Kotlin တွင် အခြေခံ assignment operator မှာ = ဖြစ်ပြီး၊ compound assignment operators (+=, -=, *=, /=, %=) များကိုလည်း အသုံးပြုနိုင်သည်။
   
  ```kotlin
   var h = 10
@@ -262,7 +272,9 @@ Assignment operators
   println(h) // 1
  ```
     
-Logical operators    
+Logical operators
+Logical operators များကို boolean expressions များကို ပေါင်းစပ်ရန်နှင့် ဆုံးဖြတ်ချက်များချရာတွင် အသုံးပြုသည်။ Kotlin တွင် အသုံးများသော logical operators များမှာ && (AND), || (OR), ! (NOT) တို့ဖြစ်သည်။
+
 ```kotlin  
   val i = true
   val j = false
@@ -272,21 +284,68 @@ Logical operators
  ```
     
 Bitwise operators
+Bitwise operators များကို binary format (bits) တွင် တိုက်ရိုက်အလုပ်လုပ်ရန် အသုံးပြုသည်။ Kotlin တွင် bitwise operations များကို and, or, xor, inv, shl, shr, ushr စသည့် functions များဖြင့် လုပ်ဆောင်နိုင်သည်။
 
 ```kotlin
-  val k = 0b1010
-  val l = 0b1100
-  println(k and l) // Prints "8" (0b1000)
-  println(k or l) // Prints "14" (0b1110)
-  println(k xor l) // Prints "6" (0b0110)
+  val a = 5  // Binary: 0101
+  val b = 3  // Binary: 0011
+
+  println("AND: ${a and b}") // Output: AND: 1
+  println("OR: ${a or b}")   // Output: OR: 7
+  println("XOR: ${a xor b}") // Output: XOR: 6
+  println("NOT: ${a.inv()}") // Output: NOT: -6
+  println("SHL: ${a shl 1}") // Output: SHL: 10
+  println("SHR: ${a shr 1}") // Output: SHR: 2
+  println("USHR: ${a ushr 1}") // Output: USHR: 2
  ```
 
 Range operator
+Range operator (..) ကို အသုံးပြု၍ နံပါတ်များ၏ range ကို ဖန်တီးနိုင်သည်။ Kotlin တွင် range များကို for loop နှင့် in operator တို့ဖြင့် အသုံးပြုနိုင်သည်။
 
 ```kotlin
   val o = 1..10
   println(o.contains(5)) // Prints "true"
   println(o.contains(11)) // Prints "false"
+```
+
+Basic Range
+```kotlin
+  val range = 1..5
+  for (i in range) {
+    print("$i ") // Output: 1 2 3 4 5
+  }
+```
+
+Range with Step
+step ကို အသုံးပြု၍ range အတွင်း ခုန်ခြင်းကို သတ်မှတ်နိုင်သည်။
+```kotlin
+for (i in 1..10 step 2) {
+    print("$i ") // Output: 1 3 5 7 9
+}
+```
+
+Reverse Range
+downTo ကို အသုံးပြု၍ reverse range ကို ဖန်တီးနိုင်သည်။
+```kotlin
+for (i in 5 downTo 1) {
+    print("$i ") // Output: 5 4 3 2 1
+}
+```
+
+Exclusive Range
+until ကို အသုံးပြု၍ end value မပါသော range ကို ဖန်တီးနိုင်သည်။
+```kotlin
+for (i in 1 until 5) {
+    print("$i ") // Output: 1 2 3 4
+}
+```
+
+Range with Characters
+Range operator ကို characters များအတွက်လည်း အသုံးပြုနိုင်သည်။
+```kotlin
+for (c in 'a'..'e') {
+    print("$c ") // Output: a b c d e
+}
 ```
     
 ## Control flow  <a name="control-flow"></a>
