@@ -10,7 +10,7 @@ Kotlin cheat sheet ဆိုသည်မှာ Kotlin ၏ အရေးကြီ�
 # Table of Contents (မာတိကာ)
 
 
-- [Introduction](#introduction (မိတ်ဆက်))
+- [Introduction](#introduction မိတ်ဆက်)
   - [First Kotlin program](#first-kotlin-program)
   - [Get input from user](#get-input-from-user)
   - [Comments](#comments)
