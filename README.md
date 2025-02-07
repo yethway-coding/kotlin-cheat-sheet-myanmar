@@ -10,7 +10,7 @@ Kotlin cheat sheet ဆိုသည်မှာ Kotlin ၏ အရေးကြီ�
 # Table of Contents (မာတိကာ)
 
 
-- [Introduction](#introduction မိတ်ဆက်)
+- [Introduction (မိတ်ဆက်)](#introduction)
   - [First Kotlin program](#first-kotlin-program)
   - [Get input from user](#get-input-from-user)
   - [Comments](#comments)
@@ -83,7 +83,7 @@ Kotlin cheat sheet ဆိုသည်မှာ Kotlin ၏ အရေးကြီ�
 
  
   
-## Introduction <a name="introduction မိတ်ဆက်"></a>
+## Introduction <a name="introduction"></a>
 Kotlin is a modern, open-source programming language that is used for building multi-platform applications. It is concise, expressive, and powerful, with features such as null safety, extension functions, lambdas, and many others.
 This cheat sheet will cover some of the essential Kotlin concepts.
 
