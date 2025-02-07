@@ -349,6 +349,7 @@ for (c in 'a'..'e') {
 ```
     
 ## Control flow  <a name="control-flow"></a>
+Control flow သည် program ၏ execution flow ကို ထိန်းချုပ်ရန် အသုံးပြုသည်။
 
 ### If-else <a name="if-else"></a>
 
@@ -362,6 +363,8 @@ if (condition) {
 
 ### When <a name="when"></a>
 
+when သည် switch statement ၏ အဆင့်မြှင့်ထားသော version ဖြစ်သည်။
+
 ```kotlin
 when (value) {
     condition1 -> // Code to execute if value matches condition1
@@ -371,7 +374,7 @@ when (value) {
 ```
 
 ### Conditional Expression <a name="conditional-expression"></a>
-Given if and when are expressions, we can directly assign them to variables.
+Kotlin တွင် if နဲ့ when သည် expression ဖြစ်နိုင်ပြီး return ပြန်လာတဲ့ value ကို variables ထဲသို့ တိုက်ရိုက် assign လုပ်နိုင်သည်။
 
 ```kotlin
 val seasonFirstMonth = when(season) {
@@ -383,7 +386,15 @@ val seasonFirstMonth = when(season) {
 }
 ```
 
-Thus, it allows a similar ternary operator using a regular if.
+```kotlin
+val a = 10
+val b = 20
+
+val max = if (a > b) a else b
+println("Max: $max") // Output: Max: 20
+```
+
+အခြား programming languages (ဥပမာ - Java, C++) တွင် ternary operator (condition ? expr1 : expr2) ကို အသုံးပြု၍ conditional logic များကို တိုတောင်းစွာ ရေးသားနိုင်သည်။ Kotlin တွင် ternary operator မပါဝင်သော်လည်း၊ if expression ကို အသုံးပြု၍ အလားတူ functionality ကို ရရှိနိုင်သည်။
 
 ```kotlin
 val max = if (a > b) a else b         
