@@ -1,5 +1,4 @@
-# kotlin-cheat-sheet-myanmar
-<h1 id="my-title"> Kotlin Cheatsheet </h1>
+<h1 id="my-title"> Kotlin Cheatsheet Myanmar </h1>
 Kotlin cheat sheet ဆိုသည်မှာ Kotlin ၏ အရေးကြီးဆုံး syntax နှင့် features များကို အကျဉ်းချုပ်ဖော်ပြထားသော အမြန်ရည်ညွှန်းလမ်းညွှန် ဖြစ်သည်။ ဤ cheat sheet ရှိ အကြောင်းအရာများစွာကို တရားဝင် Kotlin မှတ်တမ်းမှ စုဆောင်းထားခြင်းဖြစ်ပြီး အသေးစိတ်ရှင်းလင်းချက်များကို ရှောင်ရှားထားသည်။ ဤ cheat sheet ကို အသေးစိတ်အချက်အလက်များကို ရှင်းပြရန်အတွက် မဟုတ်ဘဲ အမြန်ပြန်လည်သုံးသပ်ရန် ရည်ရွယ်ထားသောကြောင့်
 <a href="https://kotlinlang.org/docs/home.html"> တရားဝင် Kotlin မှတ်တမ်း</a> ကိုလည်း ဖတ်ရှုရန် အကြံပြုအပ်ပါသည်။
 
