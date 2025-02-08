@@ -706,18 +706,65 @@ fun main() {
 
 let function သည် object တစ်ခုပေါ်တွင် code block တစ်ခုကို execute လုပ်ပြီး၊ block ၏ နောက်ဆုံး expression ၏ result ကို return ပြန်ပေးသည်။\
 Object သည် block အတွင်းတွင် it (default) သို့မဟုတ် custom name ဖြင့် access လုပ်နိုင်သည်။\
-let function ကို null checks နှင့် scoping များအတွက် အသုံးပြုနိုင်သည်။\
+let function ကို null checks နှင့် scoping များအတွက် အသုံးပြုနိုင်သည်။
+
+Basic Usage of let:
 
 ```kotlin
-val message: String? = "Hello"
-message?.let {
-    print(it.toUpperCase()) // Output: "HELLO"
+fun main() {
+    val name: String? = "Alice"
+    val length = name?.let {
+        println("Name: $it") // Output: Name: Alice
+        it.length // Return the length of the name
+    }
+    println("Length: $length") // Output: Length: 5
+}
+```
+
+let block အတွင်းတွင် object ကို custom name ဖြင့် access လုပ်နိုင်သည်။
+```kotlin
+fun main() {
+    val name: String? = "Alice"
+    val length = name?.let { n ->
+        println("Name: $n") // Output: Name: Alice
+        n.length // Return the length of the name
+    }
+    println("Length: $length") // Output: Length: 5
+}
+```
+
+let function ကို null checks များအတွက် အသုံးပြုနိုင်သည်။
+```kotlin
+fun printLength(name: String?) {
+    name?.let {
+        println("Length of '$it' is ${it.length}")
+    } ?: println("Name is null")
+}
+
+fun main() {
+    printLength("Alice") // Output: Length of 'Alice' is 5
+    printLength(null)    // Output: Name is null
+}
+```
+
+let function ကို အခြား scope functions များနှင့် ပေါင်းစပ်အသုံးပြုနိုင်သည်။
+```kotlin
+fun main() {
+    val name: String? = "Alice"
+    val result = name?.let {
+        it.uppercase()
+    }?.let {
+        "Hello, $it"
+    }
+    println(result) // Output: Hello, ALICE
 }
 ```
 
 - run
 
-Like let, run is another scoping function from the standard library. Basically, it does the same: executes a code block and returns its result. The difference is that inside run the object is accessed by this. This is useful when you want to call the object's methods rather than pass it as an argument.
+run function သည် let function ကဲ့သို့ပဲ သည် object တစ်ခုပေါ်တွင် code block တစ်ခုကို execute လုပ်ပြီး၊ block ၏ နောက်ဆုံး expression ၏ result ကို return ပြန်ပေးသည်။\
+ခြားနားချက်များမှာ : Object ကို block အတွင်းတွင် this keyword ဖြင့် access လုပ်နိုင်သည်။\
+run function သည် object ၏ methods များကို ခေါ်ဆိုရာတွင် အထူးသင့်လျော်သည်။
 
 ```kotlin
 val message: String? = "Hello"
@@ -727,7 +774,9 @@ message?.run {
 ```
 - with
 
-with is a non-extension function that can access members of its argument concisely: you can omit the instance name when referring to its members.
+with function သည် non-extension function တစ်ခုဖြစ်ပြီး၊ object တစ်ခုပေါ်တွင် code block တစ်ခုကို execute လုပ်ပြီး၊ block ၏ နောက်ဆုံး expression ၏ result ကို return ပြန်ပေးသည်။\
+Object ကို block အတွင်းတွင် this keyword ဖြင့် access လုပ်နိုင်သည်။\
+with function သည် instance name ကိုသုံးစရာမလိုပဲ object ၏ members များကို တိုက်ရိုက် access လုပ်နိုင်သည်။
 ```kotlin
 val person = Person("Ali", 24)
 val message = with(person) {
@@ -736,18 +785,18 @@ val message = with(person) {
 ```
 - apply
 
-apply executes a block of code on an object and returns the object itself. Inside the block, the object is referenced by this. This function is handy for initializing objects.
+apply function သည် object တစ်ခုပေါ်တွင် code block တစ်ခုကို execute လုပ်ပြီး၊ object ကိုယ်တိုင်ကို return ပြန်ပေးသည်။ Block အတွင်းတွင် object ကို this keyword ဖြင့် access လုပ်နိုင်သည်။ apply function သည် object initialization များအတွက် အထူးသင့်လျော်သည်။
 ```kotlin
-val person = Person("Ali", 24)
+val person = Person("Ye Thway", 24)
 person.apply {
-    name = "Ali"
+    name = "Ye Thway"
     age = 24
 }
 ```
 
 - also
 
-also works like apply: it executes a given block and returns the object called. Inside the block, the object is referenced by it, so it's easier to pass it as an argument. This function is handy for embedding additional actions, such as logging in call chains.
+also function သည် apply function ကဲ့သို့ပင်၊ code block တစ်ခုကို execute လုပ်ပြီး၊ object ကိုယ်တိုင်ကို return ပြန်ပေးသည်။ Block အတွင်းတွင် object ကို it keyword ဖြင့် access လုပ်နိုင်သည်။ ၎င်းသည် additional actions (ဥပမာ - logging) များကို call chains များတွင် ထည့်သွင်းရာတွင် အထူးသင့်လျော်သည်။
 ```kotlin
 val message: String? = "Hello"
 message?.also {
