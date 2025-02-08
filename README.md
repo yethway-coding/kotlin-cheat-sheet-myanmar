@@ -706,7 +706,9 @@ fun main() {
 
 let function သည် object တစ်ခုပေါ်တွင် code block တစ်ခုကို execute လုပ်ပြီး၊ block ၏ နောက်ဆုံး expression ၏ result ကို return ပြန်ပေးသည်။\
 Object သည် block အတွင်းတွင် it (default) သို့မဟုတ် custom name ဖြင့် access လုပ်နိုင်သည်။\
-let function ကို null checks နှင့် scoping များအတွက် အသုံးပြုနိုင်သည်။
+let function ကို null checks နှင့် scoping များအတွက် အသုံးပြုနိုင်သည်။\
+refer: it\
+return: lambda result
 
 Basic Usage of let:
 
@@ -764,7 +766,9 @@ fun main() {
 
 run function သည် let function ကဲ့သို့ပဲ သည် object တစ်ခုပေါ်တွင် code block တစ်ခုကို execute လုပ်ပြီး၊ block ၏ နောက်ဆုံး expression ၏ result ကို return ပြန်ပေးသည်။\
 ခြားနားချက်များမှာ : Object ကို block အတွင်းတွင် this keyword ဖြင့် access လုပ်နိုင်သည်။\
-run function သည် object ၏ methods များကို ခေါ်ဆိုရာတွင် အထူးသင့်လျော်သည်။
+run function သည် object ၏ methods များကို ခေါ်ဆိုရာတွင် အထူးသင့်လျော်သည်။\
+refer: this\
+return: lambda result
 
 ```kotlin
 val message: String? = "Hello"
@@ -776,7 +780,10 @@ message?.run {
 
 with function သည် non-extension function တစ်ခုဖြစ်ပြီး၊ object တစ်ခုပေါ်တွင် code block တစ်ခုကို execute လုပ်ပြီး၊ block ၏ နောက်ဆုံး expression ၏ result ကို return ပြန်ပေးသည်။\
 Object ကို block အတွင်းတွင် this keyword ဖြင့် access လုပ်နိုင်သည်။\
-with function သည် instance name ကိုသုံးစရာမလိုပဲ object ၏ members များကို တိုက်ရိုက် access လုပ်နိုင်သည်။
+with function သည် instance name ကိုသုံးစရာမလိုပဲ object ၏ members များကို တိုက်ရိုက် access လုပ်နိုင်သည်။\
+refer: this\
+return: lambda result
+
 ```kotlin
 val person = Person("Ali", 24)
 val message = with(person) {
@@ -785,7 +792,10 @@ val message = with(person) {
 ```
 - apply
 
-apply function သည် object တစ်ခုပေါ်တွင် code block တစ်ခုကို execute လုပ်ပြီး၊ object ကိုယ်တိုင်ကို return ပြန်ပေးသည်။ Block အတွင်းတွင် object ကို this keyword ဖြင့် access လုပ်နိုင်သည်။ apply function သည် object initialization များအတွက် အထူးသင့်လျော်သည်။
+apply function သည် object တစ်ခုပေါ်တွင် code block တစ်ခုကို execute လုပ်ပြီး၊ object ကိုယ်တိုင်ကို return ပြန်ပေးသည်။ Block အတွင်းတွင် object ကို this keyword ဖြင့် access လုပ်နိုင်သည်။ apply function သည် object initialization များအတွက် အထူးသင့်လျော်သည်။\
+refer: this\
+return: context objext
+
 ```kotlin
 val person = Person("Ye Thway", 24)
 person.apply {
@@ -796,13 +806,23 @@ person.apply {
 
 - also
 
-also function သည် apply function ကဲ့သို့ပင်၊ code block တစ်ခုကို execute လုပ်ပြီး၊ object ကိုယ်တိုင်ကို return ပြန်ပေးသည်။ Block အတွင်းတွင် object ကို it keyword ဖြင့် access လုပ်နိုင်သည်။ ၎င်းသည် additional actions (ဥပမာ - logging) များကို call chains များတွင် ထည့်သွင်းရာတွင် အထူးသင့်လျော်သည်။
+also function သည် apply function ကဲ့သို့ပင်၊ code block တစ်ခုကို execute လုပ်ပြီး၊ object ကိုယ်တိုင်ကို return ပြန်ပေးသည်။ Block အတွင်းတွင် object ကို it keyword ဖြင့် access လုပ်နိုင်သည်။ ၎င်းသည် additional actions (ဥပမာ - logging) များကို call chains များတွင် ထည့်သွင်းရာတွင် အထူးသင့်လျော်သည်။\
+refer: it\
+return: context objext
+
 ```kotlin
 val message: String? = "Hello"
 message?.also {
     print(it.toUpperCase()) // Output: "HELLO"
 }
 ```
+
+##used:
+- with - Non-null object အပေါ်မှာ operate လုပ်လိုလျှင် အသုံးပြုပါ။
+- let - Nullable object အပေါ်မှာ lambda expression ရဲ့ value ကို return လုပ်လိုပြီး NullPointerException ကို ရှောင်လိုလျှင် အသုံးပြုပါ။
+- run - Nullable object အပေါ်မှာ operate လည်းလုပ်မယ်။ lambda expression ရဲ့ value ကို return လည်းလုပ်မယ်။ NullPointerException ကိုလည်း ရှောင်လိုလျှင် အသုံးပြုပါ။
+- apply - Object တစ်ခုကို စတင် သတ်မှတ်ခြင်း (initialise) သို့မဟုတ် ပြင်ဆင်ခြင်း (configure) လုပ်လိုလျှင် အသုံးပြုပါ။
+- also - Object ၏ အပိုပြင်ဆင်မှုများ သို့မဟုတ် အခြားလုပ်ဆောင်ချက်များ ထပ်မံထည့်လိုလျှင် အသုံးပြုပါ။
 
 ## Collections <a name="collections"></a>
 
