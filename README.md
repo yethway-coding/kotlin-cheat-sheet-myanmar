@@ -408,7 +408,7 @@ for (item in collection) {
 ```
 
 ### Ranges <a name="ranges"></a>
-There is a set of tools for defining ranges in Kotlin.
+Kotlin တွင် ranges များကို ဖန်တီးရန် လွယ်ကူသော tools များ ပါဝင်သည်။ Range သည် တန်ဖိုးများ၏ sequence တစ်ခုဖြစ်ပြီး၊ .. operator, rangeTo(), downTo(), step, until စသည့် functions များဖြင့် ဖန်တီးနိုင်သည်။
 ```kotlin
 
 for(i in 0..3) {             
@@ -427,13 +427,13 @@ for (i in 3 downTo 0) {
     print(i)
 }
 ```
-Char ranges are also supported.
+Char မှာလည်း ranges များကို အသုံးပြုနိုင်သည်။
 ```kotlin
 for (c in 'a'..'d') {   
     print(c)
 }
 ```
-Ranges are also useful in if statements.
+Kotlin တွင် ranges များကို if statements တွင်လည်း အသုံးပြုနိုင်သည်။ in operator ကို အသုံးပြု၍ တန်ဖိုးတစ်ခု range အတွင်းရှိမရှိ စစ်ဆေးနိုင်သည်။
 
 ```kotlin
 if (x in 1..5) {           
@@ -470,12 +470,13 @@ for (i in 1..10) {
 ```
 ### Exceptions  <a name="exceptions"></a>
 
-To throw an exception object, use the throw expression:
+Exceptions များကို အသုံးပြု၍ error handling ကို ထိရောက်စွာ စီမံနိုင်သည်။ 
+Exception တစ်ခုကို ဖြစ်ပေါ်စေရန် throw keyword ကို အသုံးပြုသည်။
 
 ```kotlin
 throw Exception("Exception...")
 ```
-To catch an exception, use the try...catch expression:
+Exception ကို ဖမ်းရန် try...catch block ကို အသုံးပြုသည်။
 
 ```kotlin
 try {
@@ -486,7 +487,7 @@ try {
     // optional finally block
 }
 ```
-The Nothing type: This type has no values and is used to mark code locations that can never be reached. In your own code, you can use Nothing to mark a function that never returns.
+Nothing type သည် Kotlin တွင် special type တစ်ခုဖြစ်ပြီး၊ ၎င်းတွင် မည်သည့် value မျှ မရှိပါ။ Nothing type ကို မည်သည့်အခါမှ ရောက်ရှိနိုင်မည်မဟုတ်သော code locations များကို သတ်မှတ်ရန် အသုံးပြုသည်။ Nothing type ကို အသုံးပြု၍ မည်သည့်အခါမှ return မပြန်သော functions များကို သတ်မှတ်နိုင်သည်။
 ```kotlin
 fun fail(message: String): Nothing {
     throw IllegalArgumentException(message)
@@ -494,7 +495,7 @@ fun fail(message: String): Nothing {
 ```
 ## Functions <a name="functions"></a>
 
-### Function Declaration  <a name="function-declaration"></a>
+### Function Declaration (Function ကြေညာခြင်း)  <a name="function-declaration"></a>
 
 ```kotlin
 fun sayHello() {
@@ -535,8 +536,7 @@ fun add(a: Int, b: Int): Int {
 fun multiply(a: Int, b: Int) = a * b
 ```
 
-Unit-returning functions
-If a function does not return a value, its return type is Unit.
+Kotlin တွင် function တစ်ခုသည် တန်ဖိုးတစ်ခုကို return မပြန်ပါက၊ ၎င်း function ၏ return type ကို Unit အဖြစ် သတ်မှတ်သည်။ Unit သည် Java တွင် void နှင့် ညီမျှသည်။
 
 ```kotlin
 fun printHello(): Unit {
