@@ -702,127 +702,62 @@ fun main() {
 
 ### Scope Functions <a name="scope-functions"></a>
 
-- let
+- with
+အသုံးပြုပုံ: Non-null Object တစ်ခုပေါ်တွင် လုပ်ဆောင်ချက်များ လုပ်လိုပါက သုံးပါ။\
+refer: this\
+return: lambda result
+```kotlin
+val book = Book()
+with(book) {
+    title = "Kotlin Guide"  // book.title လို့ မရေးဘဲ တိုက်ရိုက်သုံးနိုင်သည်။
+    author = "Mg Mg"
+}
+```
 
-let function သည် object တစ်ခုပေါ်တွင် code block တစ်ခုကို execute လုပ်ပြီး၊ block ၏ နောက်ဆုံး expression ၏ result ကို return ပြန်ပေးသည်။\
-Object သည် block အတွင်းတွင် it (default) သို့မဟုတ် custom name ဖြင့် access လုပ်နိုင်သည်။\
-let function ကို null checks နှင့် scoping များအတွက် အသုံးပြုနိုင်သည်။\
+- let
+အသုံးပြုပုံ: Nullable Object တစ်ခုပေါ်တွင် လုပ်ဆောင်ချက်များကို ဘေးကင်းစွာ လုပ်လိုပါက သုံးပါ။ Null ဖြစ်နိုင်တဲ့အရာကို စစ်ပြီးမှ လုပ်ဆောင်ပေးပါတယ်။\
 refer: it\
 return: lambda result
-
-Basic Usage of let:
-
 ```kotlin
-fun main() {
-    val name: String? = "Alice"
-    val length = name?.let {
-        println("Name: $it") // Output: Name: Alice
-        it.length // Return the length of the name
-    }
-    println("Length: $length") // Output: Length: 5
-}
-```
-
-let block အတွင်းတွင် object ကို custom name ဖြင့် access လုပ်နိုင်သည်။
-```kotlin
-fun main() {
-    val name: String? = "Alice"
-    val length = name?.let { n ->
-        println("Name: $n") // Output: Name: Alice
-        n.length // Return the length of the name
-    }
-    println("Length: $length") // Output: Length: 5
-}
-```
-
-let function ကို null checks များအတွက် အသုံးပြုနိုင်သည်။
-```kotlin
-fun printLength(name: String?) {
-    name?.let {
-        println("Length of '$it' is ${it.length}")
-    } ?: println("Name is null")
-}
-
-fun main() {
-    printLength("Alice") // Output: Length of 'Alice' is 5
-    printLength(null)    // Output: Name is null
-}
-```
-
-let function ကို အခြား scope functions များနှင့် ပေါင်းစပ်အသုံးပြုနိုင်သည်။
-```kotlin
-fun main() {
-    val name: String? = "Alice"
-    val result = name?.let {
-        it.uppercase()
-    }?.let {
-        "Hello, $it"
-    }
-    println(result) // Output: Hello, ALICE
+val name: String? = null
+name?.let { 
+    println(it)  // name က Null မဟုတ်မှသာ ဒီအပိုင်း လုပ်ဆောင်မည်။
 }
 ```
 
 - run
-
-run function သည် let function ကဲ့သို့ပဲ သည် object တစ်ခုပေါ်တွင် code block တစ်ခုကို execute လုပ်ပြီး၊ block ၏ နောက်ဆုံး expression ၏ result ကို return ပြန်ပေးသည်။\
-ခြားနားချက်များမှာ : Object ကို block အတွင်းတွင် this keyword ဖြင့် access လုပ်နိုင်သည်။\
-run function သည် object ၏ methods များကို ခေါ်ဆိုရာတွင် အထူးသင့်လျော်သည်။\
+အသုံးပြုပုံ: Nullable Object တစ်ခုပေါ်တွင် လုပ်ဆောင်ချက်များကို တစ်ပြိုင်နက် လုပ်လိုပါက သုံးပါ။ let နဲ့ ဆင်သော်လည်း let ကို null-safety အတွက်သာ အသုံးများကြသည်။ run ကိုတော့ null-safety အရင်ဖြစ်စေပြီးမှ operation များကိုပါ ဆက်လက်လုပ်ဆောင်စေဖို့ သုံးကြသည်။\
 refer: this\
 return: lambda result
-
 ```kotlin
-val message: String? = "Hello"
-message?.run {
-    print(this.toUpperCase()) // Output: "HELLO"
+val result = user?.run {
+    age = 30   // user ကို ပြင်ဆင်သည့် operation
+    getInfo()  // နောက်ဆုံးတန်ဖိုးကို result ထဲထည့်ပေးမည်။
 }
 ```
-- with
 
-with function သည် non-extension function တစ်ခုဖြစ်ပြီး၊ object တစ်ခုပေါ်တွင် code block တစ်ခုကို execute လုပ်ပြီး၊ block ၏ နောက်ဆုံး expression ၏ result ကို return ပြန်ပေးသည်။\
-Object ကို block အတွင်းတွင် this keyword ဖြင့် access လုပ်နိုင်သည်။\
-with function သည် instance name ကိုသုံးစရာမလိုပဲ object ၏ members များကို တိုက်ရိုက် access လုပ်နိုင်သည်။\
-refer: this\
-return: lambda result
-
-```kotlin
-val person = Person("Ali", 24)
-val message = with(person) {
-    "My name is $name and I'm $age years old."
-}
-```
 - apply
-
-apply function သည် object တစ်ခုပေါ်တွင် code block တစ်ခုကို execute လုပ်ပြီး၊ object ကိုယ်တိုင်ကို return ပြန်ပေးသည်။ Block အတွင်းတွင် object ကို this keyword ဖြင့် access လုပ်နိုင်သည်။ apply function သည် object initialization များအတွက် အထူးသင့်လျော်သည်။\
+အသုံးပြုပုံ: Object တစ်ခုကို စတင်ပြင်ဆင်ခြင်း(initialization) (သို့) ပြင်ဆင်ခြင်း(configuration) လုပ်လိုပါက သုံးပါ။ လုပ်ဆောင်ပြီးနောက် Object ကိုပဲ ပြန်ပေးသည်။\
 refer: this\
 return: context objext
 
 ```kotlin
-val person = Person("Ye Thway", 24)
-person.apply {
-    name = "Ye Thway"
-    age = 24
+val car = Car().apply {
+    color = "Red"    // Car Object ကို စတင်ပြင်ဆင်ခြင်း
+    speed = 200
 }
 ```
 
 - also
-
-also function သည် apply function ကဲ့သို့ပင်၊ code block တစ်ခုကို execute လုပ်ပြီး၊ object ကိုယ်တိုင်ကို return ပြန်ပေးသည်။ Block အတွင်းတွင် object ကို it keyword ဖြင့် access လုပ်နိုင်သည်။ ၎င်းသည် additional actions (ဥပမာ - logging) များကို call chains များတွင် ထည့်သွင်းရာတွင် အထူးသင့်လျော်သည်။\
+အသုံးပြုပုံ: Object တစ်ခုကို အပိုပြင်ဆင်မှုများ (သို့) စစ်ဆေးမှုများ လုပ်လိုပါက သုံးပါ။ ဥပမာ- Log ထုတ်ခြင်း၊ အချက်အလက်စစ်ခြင်း။\
 refer: it\
 return: context objext
 
 ```kotlin
-val message: String? = "Hello"
-message?.also {
-    print(it.toUpperCase()) // Output: "HELLO"
+val message = "Hello".also {
+    println("Log: $it")  // "Hello" ကို Log ထုတ်ပြီးမှ နောက်တစ်ဆင့်ဆက်လုပ်မည်။
 }
 ```
-
-##used:
-- with - Non-null object အပေါ်မှာ operate လုပ်လိုလျှင် အသုံးပြုပါ။
-- let - Nullable object အပေါ်မှာ lambda expression ရဲ့ value ကို return လုပ်လိုပြီး NullPointerException ကို ရှောင်လိုလျှင် အသုံးပြုပါ။
-- run - Nullable object အပေါ်မှာ operate လည်းလုပ်မယ်။ lambda expression ရဲ့ value ကို return လည်းလုပ်မယ်။ NullPointerException ကိုလည်း ရှောင်လိုလျှင် အသုံးပြုပါ။
-- apply - Object တစ်ခုကို စတင် သတ်မှတ်ခြင်း (initialise) သို့မဟုတ် ပြင်ဆင်ခြင်း (configure) လုပ်လိုလျှင် အသုံးပြုပါ။
-- also - Object ၏ အပိုပြင်ဆင်မှုများ သို့မဟုတ် အခြားလုပ်ဆောင်ချက်များ ထပ်မံထည့်လိုလျှင် အသုံးပြုပါ။
 
 ## Collections <a name="collections"></a>
 
