@@ -704,7 +704,9 @@ fun main() {
 
 - let
 
-let function သည် Kotlin တွင် scoping နှင့် null-checks များအတွက် အသုံးပြုသည်။ Object တစ်ခုပေါ်တွင် let ကို ခေါ်ဆိုပါက၊ ၎င်းသည် ပေးထားသော code block ကို execute လုပ်ပြီး၊ block ၏ နောက်ဆုံး expression ၏ result ကို return ပြန်ပေးသည်။ Object သည် block အတွင်းတွင် it (default) သို့မဟုတ် custom name ဖြင့် access လုပ်နိုင်သည်။
+let function သည် object တစ်ခုပေါ်တွင် code block တစ်ခုကို execute လုပ်ပြီး၊ block ၏ နောက်ဆုံး expression ၏ result ကို return ပြန်ပေးသည်။\
+Object သည် block အတွင်းတွင် it (default) သို့မဟုတ် custom name ဖြင့် access လုပ်နိုင်သည်။\
+let function ကို null checks နှင့် scoping များအတွက် အသုံးပြုနိုင်သည်။\
 
 ```kotlin
 val message: String? = "Hello"
