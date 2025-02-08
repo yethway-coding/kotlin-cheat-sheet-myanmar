@@ -552,8 +552,7 @@ fun printHello() {
 
 ### Local functions <a name="local-functions"></a>
 
-Kotlin supports local functions, which are functions inside other functions.
-printMessage() is a local function defined within the main() function.
+Kotlin တွင် local functions များကို အသုံးပြုနိုင်သည်။ Local function သည် function တစ်ခုအတွင်းတွင် ကြေညာထားသော function တစ်ခုဖြစ်သည်။ Local functions များသည် parent function ၏ variables များကို access လုပ်နိုင်သည်။
 ```kotlin
 fun main() {
     fun printMessage(message: String) {
@@ -566,7 +565,7 @@ fun main() {
 
 ### Member functions <a name="member-functions"></a>
 
-A member function is a function that is defined inside a class or object.
+Member function သည် class သို့မဟုတ် object အတွင်းတွင် ကြေညာထားသော function တစ်ခုဖြစ်သည်။ Member functions များသည် class ၏ properties များနှင့် အခြား member functions များကို access လုပ်နိုင်သည်။
 
 ```kotlin
 class Sample {
@@ -576,7 +575,7 @@ class Sample {
 
 ### Generic functions <a name="generic-functions"></a>
 
-Functions can have generic parameters, which are specified using angle brackets before the function name
+Generic functions များသည် type parameters များကို လက်ခံနိုင်သော functions များဖြစ်သည်။ Type parameters များကို function name ရဲ့အရင် angle brackets (< >) အတွင်းတွင် သတ်မှတ်သည်။
 
 ```kotlin
 fun <T> function(item: T){ 
@@ -592,7 +591,7 @@ val sum = { a: Int, b: Int -> a + b }
 val square: (Int) -> Int = { it * it }
 ```
 ### Extension Functions and Properties <a name="extension-functions-and-Properties"></a>
-Extension Functions and Properties in Kotlin allow adding new functionality or properties to existing classes without modifying their source code.
+Extension functions နှင့် properties များသည် Kotlin ၏ powerful features များဖြစ်ပြီး၊ existing classes များကို modify မလုပ်ဘဲ function အသစ်များ သို့မဟုတ် properties အသစ်များကို ထပ်ပေါင်းထည့်နိုင်သည်။
 ```kotlin
 // Extension function
 fun String.reverse(): String {
@@ -613,9 +612,9 @@ fun main() {
 ```
 ### Higher-Order Functions <a name="higher-order-functions"></a>
 
-A higher-order function is a function that takes another function as parameter and/or returns a function.
+Higher-order function သည် function တစ်ခုကို parameter အဖြစ် လက်ခံနိုင်သည် သို့မဟုတ် function တစ်ခုကို return ပြန်နိုင်သည်။ 
 
-- Taking Functions as Parameters
+- Higher-order function သည် function တစ်ခုကို parameter အဖြစ် လက်ခံနိုင်သည်။
 
 ```kotlin
 fun calculate(x: Int, y: Int, operation: (Int, Int) -> Int): Int { 
@@ -632,7 +631,7 @@ fun main() {
 }
 ```
 
-- Returning Functions
+- Higher-order function သည် function တစ်ခုကို return ပြန်နိုင်သည်။
 
 ```kotlin
 fun operation(): (Int) -> Int {                                     
