@@ -4,7 +4,7 @@ Kotlin cheat sheet ဆိုသည်မှာ Kotlin ၏ အရေးကြီ�
 
 တစ်စုံတစ်ရာ ပြဿနာတက်ပါက issue တစ်ခုဖွင့်ပါ။ သို့မဟုတ် ပိုမိုကောင်းမွန်ရေးအတွက် ပါဝင်ဆောင်ရွက်ရန် ဝမ်းမြောက်စွာဖိတ်ခေါ်ပါသည်။ ကျွန်ုပ်ကို ထောက်ခံလိုပါက ဤ repository ကို star ⭐ ပေးပါ။
 
-![Kotlin logotype](https://github.com/alidehkhodaei/kotlin-cheatsheet/raw/main/images/kotlin_logotype.jpg)
+![Kotlin logotype](https://github.com/yethway-coding/kotlin-cheat-sheet-myanmar/raw/main/images/kotlin_logotype.jpg)
 
 # Table of Contents (မာတိကာ)
 
