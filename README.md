@@ -763,9 +763,9 @@ val message = "Hello".also {
 
 ### Array <a name="array"></a>
 
-An array is a fixed-size collection of elements of the same data type.
+Array သည် တူညီသော data type ရှိသည့် elements များ၏ fixed-size collection တစ်ခုဖြစ်သည်။ Kotlin တွင် Array ၏ အရွယ်အစား (size) ကို ကြေညာပြီးသည့်နောက် ပြောင်းလဲ၍မရပါ။
 
-- Declaring and Initializing Arrays
+- Arraysများကို Declaring လုပ်နည်းနဲ့ Initializing လုပ်နည်း
 
 ```kotlin
 
