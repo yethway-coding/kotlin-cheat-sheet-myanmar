@@ -649,7 +649,7 @@ fun main() {
 ```
 
 ### Operator overloading <a name="operator-overloading"></a>
-Operator overloading in Kotlin allows you to define and use custom operators for your own classes and types.
+built-in operators (ဥပမာ +, -, *, /, ==, !=, etc.) များကို သင့်ရဲ့ classes များအတွက် သုံးခွင့်ပြုထားသည်။ Operator overloading အတွက် Kotlin တွင် predefined function names များကို အသုံးပြုရသည်။ ဥပမာ - plus for +, minus for -, times for *, etc.
 
 ```kotlin
 data class Point(val x: Int, val y: Int) {
@@ -671,7 +671,7 @@ fun main() {
 
 ### Variable number of arguments (varargs) <a name="varargs"></a>
 
- Varargs is a feature that allows you to pass a variable number of arguments of the same type to a function
+ varargs: function တစ်ခုမှာ တူညီသော type တူတဲ့ arguments များကို အရေအတွက် အကန့်အသတ်မရှိ ထည့်သွင်းနိုင်သည်။
  
 ```kotlin
 fun printNumbers(vararg numbers: Int) {
@@ -689,7 +689,7 @@ fun main() {
 
 ### Infix notation <a name="infix-notation"></a>
 
-Infix in Kotlin allows you to define functions that can be called using infix notation (i.e., without using parentheses and the dot notation).
+Kotlin တွင် function များကို parentheses နှင့် dot notation မပါဘဲ ခေါ်ဆိုနိုင်သည်။ Infix functions များကို infix keyword ဖြင့် သတ်မှတ်သည်။
 
 ```kotlin
 infix fun Int.times(str: String) = str.repeat(this)
@@ -704,7 +704,7 @@ fun main() {
 
 - let
 
-let can be used for scoping and null-checks. When called on an object, let executes the given block of code and returns the result of its last expression. The object is accessible inside the block by the reference it (by default) or a custom name.
+let function သည် Kotlin တွင် scoping နှင့် null-checks များအတွက် အသုံးပြုသည်။ Object တစ်ခုပေါ်တွင် let ကို ခေါ်ဆိုပါက၊ ၎င်းသည် ပေးထားသော code block ကို execute လုပ်ပြီး၊ block ၏ နောက်ဆုံး expression ၏ result ကို return ပြန်ပေးသည်။ Object သည် block အတွင်းတွင် it (default) သို့မဟုတ် custom name ဖြင့် access လုပ်နိုင်သည်။
 
 ```kotlin
 val message: String? = "Hello"
