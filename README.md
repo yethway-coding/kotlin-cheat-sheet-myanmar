@@ -83,7 +83,7 @@ Kotlin cheat sheet ဆိုသည်မှာ Kotlin ၏ အရေးကြီ�
  
   
 ## Introduction (မိတ်ဆက်) <a name="introduction"></a>
-Kotlin သည် ခေတ်သစ်၊ open-source programming language တစ်ခုဖြစ်ပြီး multi-platform applications များတည်ဆောက်ရန်အတွက် အသုံးပြုသည်။ ၎င်းသည် concise (နည်းနည်းရေး)၊ expressive (များများ အလုပ်တွင်) နှင့် powerful (စွမ်းအားကြီး) ဖြစ်ပြီး null safety၊ extension functions၊ lambdas စသည့် features များစွာပါဝင်သည်။ ဤ cheat sheet တွင် Kotlin ၏ အခြေခံအကျဆုံး concepts အချို့ကို ဖော်ပြထားပါသည်။
+Kotlin သည် ခေတ်သစ်၊ open-source programming language တစ်ခုဖြစ်ပြီး multi-platform applications များတည်ဆောက်ရန်အတွက် အသုံးပြုသည်။ ၎င်းသည် code များကို နည်းနည်းရေး များများ အလုပ်တွင်စေပြီး powerful (စွမ်းအားကြီး) ဖြစ်ကာ null safety၊ extension functions၊ lambdas စသည့် features များစွာပါဝင်သည်။ ဤ cheat sheet တွင် Kotlin ၏ အခြေခံအကျဆုံး concepts အချို့ကို ဖော်ပြထားပါသည်။
 
 ### First Kotlin program (ပထမဆုံး Kotlin Program) <a name="first-kotlin-program"></a>
 
