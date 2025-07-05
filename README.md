@@ -1,8 +1,8 @@
-# Kotlin Cheatsheet (မြန်မာဘာသာပြန်)  
+# Kotlin Cheatsheet
 
-Kotlin Cheatsheet ဆိုတာက Kotlin programming language ရဲ့ အရေးကြီးဆုံး syntax တွေနဲ့ features တွေကို အချက်လိုက် မြန်မြန်ဆန်ဆန် လေ့လာနိုင်အောင် စုစည်းထားတဲ့ လမ်းညွှန်တစ်ခုဖြစ်ပါတယ်။ ဒီ cheatsheet ထဲက အကြောင်းအရာအများစုကို Kotlin ရဲ့ တရားဝင် မှတ်တမ်းကနေ ရယူထားပြီး အသေးစိတ်ရှင်းလင်းချက်တွေကို ရှောင်ရှားထားပါတယ်။ ဒီ cheatsheet က အမြန်ပြန်လှန်ကြည့်ဖို့အတွက်သာ ရည်ရွယ်ပါတယ်။ အသေးစိတ်သိချင်ရင် တရားဝင် [Kotlin documentation](https://kotlinlang.org/docs/home.html) ကို ဖတ်ဖို့ အကြံပြုပါတယ်။  
+Kotlin Cheatsheet ဆိုတာက Kotlin programming language ရဲ့ အရေးကြီးဆုံး syntax တွေနဲ့ features တွေကို မြန်မြန်ဆန်ဆန် လေ့လာနိုင်အောင် စုစည်းထားတဲ့ လမ်းညွှန်တစ်ခုဖြစ်ပါတယ်။ ဒီ cheatsheet ထဲက အကြောင်းအရာအများစုကို Kotlin ရဲ့ တရားဝင် မှတ်တမ်းကနေ ရယူထားပြီး အသေးစိတ်ရှင်းလင်းချက်တွေကို ရှောင်ရှားထားပါတယ်။ ဒီ cheatsheet က အမြန်ပြန်လှန်ကြည့်ဖို့အတွက်သာ ရည်ရွယ်ပါတယ်။ အသေးစိတ်သိချင်ရင် တရားဝင် [Kotlin documentation](https://kotlinlang.org/docs/home.html) ကို ဖတ်ဖို့ အကြံပြုပါတယ်။  
 
-တကယ်လို့ ပြဿနာတစ်ခုခုတွေ့ရင် issue တစ်ခုဖွင့်ပြောပါ (ဒါမှမဟုတ်) ဒီ repository ကို contribute လုပ်ဖို့လည်း ဝမ်းသာပါတယ်။ ကျွန်တော့်ကို အားပေးချင်ရင် repository ကို star ပေးလို့ရပါတယ်။⭐  
+တကယ်လို့ ပြဿနာတစ်ခုခုတွေ့ရင် issue တစ်ခုဖွင့်ပြီး ရေးခဲ့ပါ။ (ဒါမှမဟုတ်) ဒီ repository ကို contribute လုပ်လိုပါကလည်း ဝမ်းပန်းတသာ ကြိုဆိုပါတယ်။ ကျွန်တော့်ကို အားပေးချင်ရင် repository ကို star ပေးလို့ရပါတယ်။⭐  
 
 ![Kotlin လိုဂို](https://github.com/alidehkhodaei/kotlin-cheatsheet/raw/main/images/kotlin_logotype.jpg)  
 
@@ -80,7 +80,7 @@ Kotlin Cheatsheet ဆိုတာက Kotlin programming language ရဲ့ အ�
 - <a href="https://kotlinlang.org/docs/keyword-reference.html">Kotlin Keywords and operators (Document link)</a>  
 
 ## မိတ်ဆက် <a name="introduction"></a>  
-Kotlin ဆိုတာက ခေတ်သစ်၊ open-source programming language တစ်ခုဖြစ်ပြီး multi-platform applications တွေ ဆောက်ဖို့အတွက် အသုံးပြုပါတယ်။ ဒီ language က concise (အတိုချုံး)၊ expressive (ထင်ဟပ်မှုရှိ)၊ powerful (အားကောင်း) ပြီး null safety၊ extension functions၊ lambdas စတဲ့ features တွေပါဝင်ပါတယ်။  
+Kotlin ဆိုတာက ခေတ်သစ်၊ open-source programming language တစ်ခုဖြစ်ပြီး multi-platform applications တွေ တည်ဆောက်ဖို့အတွက် အသုံးပြုပါတယ်။ ဒီ language က concise (အတိုချုံး)၊ expressive (ထိရောက်မှုရှိ)၊ powerful (အားကောင်း) ပြီး null safety၊ extension functions၊ lambdas စတဲ့ features တွေပါဝင်ပါတယ်။  
 ဒီ cheatsheet မှာ Kotlin ရဲ့ အခြေခံအကျဆုံး concepts တချို့ကို ဖော်ပြထားပါတယ်။  
 
 ### ပထမဆုံး Kotlin program <a name="first-kotlin-program"></a>  
@@ -112,7 +112,7 @@ fun main() {
    multiple lines တွေမှာ ရေးနိုင်ပါတယ် */  
 ```  
 
-Kotlin မှာ block comments တွေကို အထပ်ထပ်လုပ်နိုင်ပါတယ်။  
+Kotlin မှာ block comments တွေကို အထပ်ထပ် ရေးနိုင်ပါတယ်။  
 ```kotlin
 /* မှတ်ချက်က ဒီမှာစပါတယ်  
 /* nested မှတ်ချက်ပါတယ် *⁠/  
@@ -128,7 +128,7 @@ KDoc ဆိုတာက Kotlin အတွက် documentation format တစ်ခ
  * 
  * @param a ပေါင်းမယ့် ပထမ ကိန်းပြည့်။  
  * @param b ပေါင်းမယ့် ဒုတိယ ကိန်းပြည့်။  
- * @return ကိန်းပြည့်နှစ်ခု ပေါင်းခြင်း။  
+ * @return ကိန်းပြည့်နှစ်ခု ပေါင်းခြင်းရဲ့ ရလာဒ်။  
  */  
 fun sum(a: Int, b: Int): Int {  
     return a + b  
@@ -186,7 +186,7 @@ z = 3.14 // Valid, z ကို တန်ဖိုးနဲ့ initialize လု�
 
 ### Type Conversion <a name="type-conversion"></a>  
 
-Kotlin မှာ data အမျိုးအစားတွေ အချင်းချင်း ပြောင်းလဲဖို့ methods အမျိုးမျိုးရှိပါတယ်။  
+Kotlin မှာ data အမျိုးအစားတွေ တစ်ခုမှ နောက်တစ်ခုသို့ ပြောင်းလဲဖို့ methods အမျိုးမျိုးရှိပါတယ်။  
 အောက်မှာ Kotlin မှာ type conversion လုပ်တဲ့ နည်းလမ်းအမျိုးမျိုးကို ဥပမာနဲ့ ပြထားပါတယ်။  
 
 ```kotlin
@@ -203,7 +203,7 @@ Kotlin မှာ data အမျိုးအစားတွေ အချင်း
     val strBol: String = bol.toString() // Boolean ကနေ String ကို ပြောင်းမယ်  
 
     val char: Char = 'A'  
-    val intChar: Int = char.toInt() // Char ကနေ Int ကို ပြောင်းမယ် // Char ကနေ Number ကို ပြောင်းတာက deprecated ဖြစ်နေပါပြီ။ Char.code property ကို အစားသုံးပါ။  
+    val intChar: Int = char.toInt() // Char ကနေ Int ကို ပြောင်းမယ် // Char ကနေ Number ကို ပြောင်းတာက deprecated ဖြစ်နေပါပြီ။ Char.code property ကို အစားထိုး သုံးပါ။  
 
     val byte: Byte = 127  
     val short: Short = byte.toShort() // Byte ကနေ Short ကို ပြောင်းမယ်  
@@ -212,7 +212,7 @@ Kotlin မှာ data အမျိုးအစားတွေ အချင်း
 ### String templates <a name="string-templates"></a>  
 
 ```kotlin
-val name= "Ali"  
+val name= "Ye Thway"  
 val result= "My name is $name"   
 ```  
 
@@ -266,7 +266,7 @@ Assignment operators (တန်ဖိုးထည့်သွင်းခြင�
   println(h) // 1  
 ```  
 
-Logical operators (လော်ဂျစ် operator များ)    
+Logical operators (လော့ဂျစ် operator များ)    
 ```kotlin  
   val i = true  
   val j = false  
@@ -275,8 +275,7 @@ Logical operators (လော်ဂျစ် operator များ)
   println(!i) // false  
 ```  
 
-Bitwise operators (ဘစ်ဝေး operator များ)  
-
+Bitwise operators
 ```kotlin
   val k = 0b1010  
   val l = 0b1100  
@@ -328,7 +327,7 @@ val seasonFirstMonth = when(season) {
 }  
 ```  
 
-ဒါကြောင့် regular if သုံးပြီး ternary operator နဲ့ တူတဲ့ အလားအလာရှိပါတယ်။  
+ဒါကြောင့် regular if သုံးပြီး ternary operator နဲ့ တူအောင် ရေးနိုင်ပါတယ်။  
 
 ```kotlin
 val max = if (a > b) a else b         
@@ -342,7 +341,7 @@ for (item in collection) {
 ```  
 
 ### Ranges <a name="ranges"></a>  
-Kotlin မှာ ranges တွေသတ်မှတ်ဖို့ tools တစ်စုံရှိပါတယ်။  
+Kotlin မှာ ranges တွေသတ်မှတ်ဖို့ tools အစုံလိုက် ရှိပါတယ်။  
 ```kotlin
 
 for(i in 0..3) {              
@@ -398,15 +397,15 @@ for (i in 1..10) {
         break // i က 5 နဲ့ ညီတဲ့အခါ loop ကနေ ထွက်မယ်  
     }  
     if (i % 2 == 0) {  
-        continue // ဂဏန်းစုံတွေကို ကျော်ပြီး နောက် iteration ကို ဆက်သွားမယ်  
+        continue // စုံ,ဂဏန်းတွေကို ကျော်ပြီး နောက် iteration ကို ဆက်သွားမယ်  
     }  
-    // 1 ကနေ 10 အထိ ဂဏန်းမကိန်းတွေအတွက် execute လုပ်မယ့် code  
+    // 1 ကနေ 10 အထိ မ,ဂဏန်းတွေအတွက် execute လုပ်မယ့် code  
 }  
 ```  
 
 ### Exceptions <a name="exceptions"></a>  
 
-Exception object တစ်ခုကို လွှင့်ဖို့ throw expression ကို အသုံးပြုပါ:  
+Exception object တစ်ခုကို throw လုပ်ဖို့ throw expression ကို အသုံးပြုပါ:  
 
 ```kotlin
 throw Exception("Exception...")  
@@ -455,10 +454,10 @@ fun main() {
     greet() // output: Hello, World!  
 
     // named arguments တွေနဲ့ function ကို ခေါ်မယ်  
-    greet(greeting = "Hi", name = "Ali") // output: Hi, Ali!  
+    greet(greeting = "Hi", name = "Ye Thway") // output: Hi, Ye Thway!  
 
     // named arguments တချို့နဲ့ function ကို ခေါ်မယ်  
-    greet(name = "Reza") // output: Hello, Reza!  
+    greet(name = "Yati") // output: Hello, Yati!  
 }  
 ```  
 
@@ -543,9 +542,9 @@ val String.firstChar: Char
 ```  
 ```kotlin
 fun main() {  
-    val str = "Ali"  
-    println(str.reverse())  // "ilA" ကို ရိုက်ထုတ်မယ်  
-    println(str.firstChar)  // "A" ကို ရိုက်ထုတ်မယ်  
+    val str = "Ye Thway"  
+    println(str.reverse())  // "yawhT eY" ကို ရိုက်ထုတ်မယ်  
+    println(str.firstChar)  // "Y" ကို ရိုက်ထုတ်မယ်  
 }  
 ```  
 
@@ -772,7 +771,7 @@ names.reverse()
 
 ### List <a name="list"></a>  
 
-- သတ်မှတ်ထားတဲ့ အစဉ်လိုက် element တွေရဲ့ collection တစ်ခု  
+- အစဉ်လိုက် သတ်မှတ်ထားတဲ့ element တွေရဲ့ collection တစ်ခု  
 - Duplicates တွေပါနိုင်တယ်  
 - Immutable: listOf(), or mutable: mutableListOf()  
 - List: ဒါက element တွေရဲ့ read-only list တစ်ခုအတွက် အခြေခံ interface ဖြစ်တယ်။  
@@ -789,7 +788,7 @@ val list2=mutableListOf(1, 2, 3, 4, 5)
 ```kotlin
     val numbers = mutableListOf(1, 2, 3)  
     numbers.add(4) // သတ်မှတ်ထားတဲ့ element ကို list ရဲ့ အဆုံးမှာ ထည့်မယ်  
-    numbers.remove(3) // list ထဲက သတ်မှတ်ထားတဲ့ element ရဲ့ ပထမဆုံး အကြိမ်ကို ဖယ်ရှားမယ်  
+    numbers.remove(3) // list ထဲက သတ်မှတ်ထားတဲ့ element ရဲ့ ပထမဆုံး element ကို ဖယ်ရှားမယ်  
     numbers[1] // list ထဲက သတ်မှတ်ထားတဲ့ index မှာ ရှိတဲ့ element ကို return ပြန်မယ်  
 ```  
 
@@ -821,7 +820,7 @@ val map2= mutableListOf(1 to "one", 2 to "two", 3 to "three")
 ### Set <a name="set"></a>  
 
 - Duplicates မရှိတဲ့ element တွေရဲ့ collection တစ်ခု  
-- Elements တွေက သတ်မှတ်ထားတဲ့ အစဉ်လိုက်မဟုတ်ဘူး  
+- Elements တွေက သတ်မှတ်ထားတဲ့ အစဉ်လိုက်အတိုင်း မဟုတ်ဘူး  
 - Immutable: setOf(), or mutable: mutableSetOf  
 - Set: ဒါက element တွေရဲ့ read-only set တစ်ခုအတွက် အခြေခံ interface ဖြစ်တယ်။  
 - MutableSet: ဒါက Set ရဲ့ subinterface တစ်ခုဖြစ်ပြီး element တွေထည့်ခြင်း၊ ဖယ်ရှားခြင်းလိုမျိုး mutable operations တွေကို ခွင့်ပြုတယ်။  
@@ -855,7 +854,7 @@ val set2=mutableSetOf(1, 2, 3, 4, 5)
 ```kotlin
 class Person(val name: String, var age: Int) // class  
 
-val person = Person("Ali", 24) // object  
+val person = Person("Ye Thway", 24) // object  
 ```  
 
 ### Property and methods <a name="property-and-methods"></a>  
@@ -899,9 +898,9 @@ Properties, getter/setter, backing fields, backing properties စတာတွေ
 
 ### Visibility modifiers <a name="visibility-modifiers" ></a>  
 
-- private: visibility ကို တူညီတဲ့ class အတွင်းမှာသာ ကန့်သတ်မယ်။  
-- protected: visibility ကို တူညီတဲ့ class နဲ့ ၎င်းရဲ့ subclasses တွေအတွင်းမှာသာ ကန့်သတ်မယ်။  
-- internal: visibility ကို တူညီတဲ့ module အတွင်းမှာသာ ကန့်သတ်မယ်။  
+- private: visibility ကို တူညီတဲ့ class အတွင်းမှာသာ သုံးခွင့်ပြုဖို့ ကန့်သတ်မယ်။  
+- protected: visibility ကို တူညီတဲ့ class နဲ့ ၎င်းရဲ့ subclasses တွေအတွင်းမှာသာ သုံးခွင့်ပြုဖို့ ကန့်သတ်မယ်။  
+- internal: visibility ကို တူညီတဲ့ module အတွင်းမှာသာ သုံးခွင့်ပြုဖို့ ကန့်သတ်မယ်။  
 - public: ဘယ်နေရာကမဆို visibility ကို ခွင့်ပြုမယ်။  
 
 ### Late-initialized properties and variables <a name="late-initialized-properties-and-variables"></a>  
@@ -922,7 +921,7 @@ println(myLateInitVar) // "Hello World" ကိုရိုက်ထုတ်မ�
 ```  
 
 ### Inheritance <a name="inheritance"></a>  
-Inheritance ဆိုတာ class တစ်ခုက အခြား class တစ်ခုရဲ့ properties တွေနဲ့ methods တွေကို ရယူဖို့ လုပ်ဆောင်ချက်ဖြစ်တယ်။  
+Inheritance ဆိုတာ class တစ်ခုက အခြား class တစ်ခုရဲ့ properties တွေနဲ့ methods တွေကို ရယူဖို့ အမွေဆက်ခံတဲ့ လုပ်ဆောင်ချက်ဖြစ်တယ်။  
 
 ```kotlin
 open class Animal(val name: String) {  
@@ -983,7 +982,7 @@ Object expression တစ်ခုက anonymous class တစ်ခုရဲ့ in
 
 ```kotlin
 val person = object {  
-    val name = "Ali"  
+    val name = "Ye Thway"  
     fun sayHello() {  
         println("Hello, my name is $name")  
     }  
@@ -1010,7 +1009,7 @@ Data class ဆိုတာ data တွေကို သိမ်းဆည်း�
 ```kotlin
 data class Person(val name: String, var age: Int)  
 
-val person = Person("Ali", 24)  
+val person = Person("Ye Thway", 24)  
 ```  
 
 ### Nested and Inner class <a name="nested-and-inner-class"></a>  
@@ -1037,7 +1036,7 @@ class Outer {
 ```  
 
 ### Type aliases <a name="type-aliases"></a>  
-Type aliases တွေက existing types တွေအတွက် အခြားနာမည်တွေ ပေးဖို့ ဖြစ်တယ်။ Type name က အရမ်းရှည်နေရင် နာမည်တိုတစ်ခုကို မိတ်ဆက်ပြီး အသစ်ကို အစားသုံးနိုင်ပါတယ်။  
+Type aliases တွေက existing types တွေအတွက် အခြားနာမည်တွေ ပေးဖို့ ဖြစ်တယ်။ Type name က အရမ်းရှည်နေရင် နာမည်တိုတစ်ခုကို မိတ်ဆက်ပြီး အဲ့ဒီ နာမည်တိုအသစ်ကို အစားသုံးနိုင်ပါတယ်။  
 
 Type alias မသုံးခင်  
 ```kotlin
@@ -1067,7 +1066,7 @@ enum class Color {
 
 ### Sealed class and interface <a name="sealed-class-and-interface"></a>  
 
-Sealed class/interface တစ်ခုက ၎င်းရဲ့ subclasses/interfaces တွေရဲ့ inheritance ကို တူညီတဲ့ file အတွင်းမှာသာ ကန့်သတ်ထားတယ်။  
+Sealed class/interface တစ်ခုက ၎င်းရဲ့ subclasses/interfaces တွေရဲ့ inheritance ကို တူညီတဲ့ file အတွင်းမှာသာ subClass အဖြစ် ရေးသားဖို့ ကန့်သတ်ထားတယ်။  
 
 ```kotlin
 sealed class Shape  
@@ -1111,7 +1110,7 @@ Kotlin မှာ delegated properties တွေက property တစ်ခုရ�
 Lazy variable တစ်ခုကို ပထမဆုံး access လုပ်တဲ့အခါမှသာ initialized လုပ်ပါတယ်။  
 ```kotlin
 val myLazyVar: String by lazy {  
-    // variable ကို initialize လုပ်ဖို့ စရိတ်ကြီးတဲ့ operation တစ်ခုခု လုပ်မယ်  
+    // variable ကို initialize လုပ်ဖို့ expensive operation တစ်ခုခု လုပ်မယ်  
     "Hello World"  
 }  
 // variable ကို ပထမဆုံး access မလုပ်မချင်း initialized မလုပ်သေးဘူး  
@@ -1121,7 +1120,7 @@ println(myLazyVar) // "Hello World" ကိုရိုက်ထုတ်မယ�
 ## အခြားခေါင်းစဉ်များ <a name="other-topics"></a>  
 
 ### Destructuring declarations <a name="destructuring-declarations"></a>  
-Kotlin မှာ destructuring declarations တွေက objects တွေကို individual variables တွေအဖြစ် တစ်ကြောင်းတည်းနဲ့ ဖြိုခွဲဖို့ ခွင့်ပြုပါတယ်။  
+Kotlin မှာ destructuring declarations တွေက objects တွေကို individual variables တွေအဖြစ် တစ်ကြောင်းတည်းနဲ့ ပြန်လည်ဖွဲ့စည့်ဖို့ ခွင့်ပြုပါတယ်။  
 
 ```kotlin
  val person=Person("Ali",24)  
@@ -1216,9 +1215,9 @@ Kotlin မှာ equality နှစ်မျိုးရှိပါတယ်:
 ```kotlin
 data class Person(val name:String,val age:Int)  
 
-val person1=Person("Ali",24)  
-val person2=Person("Reza",27)  
-var person3=Person("Ali",24)  
+val person1=Person("Ye Thway",24)  
+val person2=Person("Yati",27)  
+var person3=Person("Ye Thway",24)  
 
 print(person1==person2) // false  
 print(person1!=person2) // true  
@@ -1256,8 +1255,8 @@ data class Person(val name: String, val age: Int) : Comparable<Person> {
 }  
 ```  
 ```kotlin
-val person1 = Person("Ali", 24)  
-val person2 = Person("Reza", 30)  
+val person1 = Person("Ye Thway", 24)  
+val person2 = Person("Yati", 30)  
 
 if (person1 < person2) {  
     println("${person1.name} is younger than ${person2.name}")  
@@ -1268,17 +1267,17 @@ if (person1 < person2) {
 List တစ်ခုထဲက objects တွေကို sorted() (သို့) sort() function သုံးပြီး sort လုပ်တဲ့အခါ၊ Kotlin က objects တွေရဲ့ natural order ကို ဆုံးဖြတ်ဖို့ ၎င်းတို့ရဲ့ compareTo() method ကို အသုံးပြုပါတယ်။ List ထဲက objects တွေက Comparable interface ကို implement မလုပ်ထားရင် compile-time error တက်ပါလိမ့်မယ်။  
 ```kotlin
 val people = listOf(  
-    Person("Ali", 24),  
-    Person("Reza", 40),  
-    Person("Shabnam", 23)  
+    Person("Ye Thway", 24),  
+    Person("Yati", 40),  
+    Person("Pyae", 23)  
 )  
 val sortedPeople = people.sorted()  
-println(sortedPeople) // [Person(name=Shabnam, age=23), Person(name=Ali, age=24), Person(name=Reza, age=40)]  
+println(sortedPeople) // [Person(name=Pyae, age=23), Person(name=Ye Thway, age=24), Person(name=Yati, age=40)]  
 ```  
 
 ### Regex <a name="regex"></a>  
 
-Regex ဆိုတာ regular expression ရဲ့အတိုကောက်ဖြစ်ပြီး text တွေကို match လုပ်ဖို့နဲ့ manipulate လုပ်ဖို့ အသုံးပြုတဲ့ characters တစ်စဉ်ဖြစ်တယ်။  
+Regex ဆိုတာ regular expression ရဲ့အတိုကောက်ဖြစ်ပြီး text တွေကို match လုပ်ဖို့နဲ့ manipulate လုပ်ဖို့ အသုံးပြုတဲ့ characters အစုအဝေးဖြစ်တယ်။  
 
 Regex အခြေခံများ  
 
