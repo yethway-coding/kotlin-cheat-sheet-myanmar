@@ -665,7 +665,7 @@ message?.run {
 with က non-extension function တစ်ခုဖြစ်ပြီး argument ရဲ့ members တွေကို concise ဖြစ်အောင် access လုပ်နိုင်ပါတယ်: instance name ကို ထည့်မပြောဘဲ members တွေကို ရည်ညွှန်းနိုင်ပါတယ်။  
 
 ```kotlin
-val person = Person("Ali", 24)  
+val person = Person("Ye Thway", 24)  
 val message = with(person) {  
     "My name is $name and I'm $age years old."  
 }  
@@ -676,9 +676,9 @@ val message = with(person) {
 apply က object တစ်ခုပေါ်မှာ code block တစ်ခုကို execute လုပ်ပြီး object ကိုယ်တိုင်ကို return ပြန်ပါတယ်။ block အတွင်းမှာ object ကို this နဲ့ ရည်ညွှန်းပါတယ်။ ဒီ function က objects တွေကို initialize လုပ်ဖို့ အဆင်ပြေပါတယ်။  
 
 ```kotlin
-val person = Person("Ali", 24)  
+val person = Person("Ye Thway", 24)  
 person.apply {  
-    name = "Ali"  
+    name = "Ye Thway"  
     age = 24  
 }  
 ```  
@@ -871,7 +871,7 @@ class Person(val name: String) {
    }  
 }  
 
-val person = Person("Ali")  
+val person = Person("Ye Thway")  
 person.age = 24  
 person.sayHello()  
 ```  
@@ -890,7 +890,7 @@ class Person {
 
     var age = 24 // default getter နဲ့ setter ရှိတယ်  
 
-    val username="Ali" // default getter ရှိတယ်  
+    val username="Ye Thway" // default getter ရှိတယ်  
 
 }  
 ```  
@@ -1123,7 +1123,7 @@ println(myLazyVar) // "Hello World" ကိုရိုက်ထုတ်မယ�
 Kotlin မှာ destructuring declarations တွေက objects တွေကို individual variables တွေအဖြစ် တစ်ကြောင်းတည်းနဲ့ ပြန်လည်ဖွဲ့စည့်ဖို့ ခွင့်ပြုပါတယ်။  
 
 ```kotlin
- val person=Person("Ali",24)  
+ val person=Person("Ye Thway",24)  
  val (name, age) = person  
 ```  
 
@@ -1174,7 +1174,7 @@ class Person(val name: String, val age: Int) {
 import com.example.models.Person  
 
 fun main() {  
-    val person = Person("Ali", 24)  
+    val person = Person("Ye Thway", 24)  
     println("Name: ${person.name}, Age: ${person.age}")  
 }  
 ```  
