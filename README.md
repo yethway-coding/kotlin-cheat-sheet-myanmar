@@ -941,11 +941,29 @@ class Dog(name: String): Animal(name) {
 Interface နဲ့ abstract class နှစ်ခုလုံးက classes တွေလိုက်နာဖို့ contracts (သို့) blueprints တွေကို သတ်မှတ်ဖို့ နည်းလမ်းတွေပေးပါတယ်။ Abstraction အတွက် အသုံးပြုပါတယ်။  
 
 ```kotlin
-interface Vehicle {  
-    fun start()  
-    fun stop()  
-    val name: String  
-}  
+fun main() {
+    val smartPhone = SmartPhone("Smart Phone")
+    doSomething(smartPhone)
+}
+
+interface SmartDevice {
+    val name: String // = "Smart Device" // ❌ Initialization လုပ်လို့မရ
+    fun turnOn()
+    fun printName() { // can write default implementation
+        println(name)
+    }
+}
+
+class SmartPhone(override val name: String): SmartDevice {
+    override fun turnOn() {
+        println("Turn on $name")
+    }
+}
+
+fun doSomething(smartDevice: SmartDevice) {
+    smartDevice.printName()
+    smartDevice.turnOn()
+} 
 ```  
 ```kotlin
 abstract class Animal {  
